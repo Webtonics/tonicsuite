@@ -96,19 +96,28 @@ class ReviewManagement extends StatelessWidget {
             route: '/review-requests',
             isSelected: currentLocation == '/review-requests',
           ),
-          NavigationItem(
-            icon: Icons.people,
-            title: 'Customers',
-            route: '/customers',
-            isSelected: currentLocation == '/customers',
-          ),
+          // NavigationItem(
+          //   icon: Icons.people,
+          //   title: 'Customers',
+          //   route: '/customers',
+          //   isSelected: currentLocation == '/customers',
+          // ),
           NavigationItem(
             icon: Icons.settings,
             title: 'Settings',
             route: '/settings',
             isSelected: currentLocation == '/settings',
           ),
-          const Divider(),
+          NavigationItem(
+            icon: Icons.settings,
+            title: 'Subscription',
+            route: '/subscription',
+            isSelected: currentLocation == '/subscription',
+          ),
+          const Divider(
+            color: Colors.transparent,
+            height: 300,
+          ),
           Padding(
             padding: const EdgeInsets.all(16.0),
             child: Column(

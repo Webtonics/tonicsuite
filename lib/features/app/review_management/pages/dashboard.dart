@@ -29,7 +29,7 @@ class DashboardPage extends StatelessWidget {
               final crossAxisCount = width > 1200 
                   ? 4 
                   : width > 800 
-                      ? 2 
+                      ? 3
                       : 1;
               
               return GridView.count(

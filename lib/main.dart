@@ -2,7 +2,7 @@ import 'package:dynamic_path_url_strategy/dynamic_path_url_strategy.dart';
 import 'package:flutter/material.dart';
 // import 'package:tonic_suite/features/app/missed_call_feature/dashboard.dart';
 // import 'package:tonic_suite/features/app/review_management/dashboard.dart';
-import 'package:tonic_suite/features/app/review_management/router.dart';
+import 'package:tonic_suite/router.dart';
 
 import 'constants/theme.dart';
 

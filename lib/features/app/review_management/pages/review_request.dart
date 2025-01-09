@@ -92,15 +92,28 @@ class ReviewRequestsPage extends StatelessWidget {
                 ))
             .toList(),
       ),
-      desktop: Row(
-        children: _buildStatCardsList()
-            .expand((card) => [
-                  Expanded(child: card),
-                  const SizedBox(width: 16),
-                ])
-            .take(_buildStatCardsList().length * 2 -1)
-            .toList(),
+      desktop: GridView.builder(
+        itemCount: _buildStatCardsList().length,
+        gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+          crossAxisCount: 4, // Adjust the number of columns as needed
+          mainAxisSpacing: 16, // Space between rows
+          crossAxisSpacing: 16, // Space between columns
+          childAspectRatio: 1.0, // Adjust the aspect ratio as needed
+        ),
+        itemBuilder: (context, index) {
+         return _buildStatCardsList()[index];
+          // return card; // Return the widget directly
+        },
       ),
+      // desktop: Row(
+      //   children: _buildStatCardsList()
+      //       .expand((card) => [
+      //             Expanded(child: card),
+      //             const SizedBox(width: 16),
+      //           ])
+      //       .take(_buildStatCardsList().length * 2 )
+      //       .toList(),
+      // ),
     );
   }
 

@@ -1,12 +1,13 @@
 // lib/routes/app_router.dart
 import 'package:go_router/go_router.dart';
-import 'pages/dashboard.dart';
-import 'pages/customers.dart';
-import 'pages/review_request.dart';
-import 'pages/reviews_page.dart';
-import 'pages/settings.dart';
-import 'review_mgt.dart';
-import 'utils/new_request_pop.dart';
+import 'package:tonic_suite/features/payment_system/view/pages/subscription_page.dart';
+import 'features/app/review_management/pages/dashboard.dart';
+import 'features/app/review_management/pages/customers.dart';
+import 'features/app/review_management/pages/review_request.dart';
+import 'features/app/review_management/pages/reviews_page.dart';
+import 'features/app/review_management/pages/settings.dart';
+import 'features/app/review_management/review_mgt.dart';
+import 'features/app/review_management/utils/new_request_pop.dart';
 
 class AppRouter {
   static final router = GoRouter(
@@ -44,6 +45,11 @@ class AppRouter {
             path: '/new-request',
             name: 'new-request',
             builder: (context, state) => const NewReviewRequestDialog(),
+          ),
+          GoRoute(
+            path: '/subscription',
+            name: 'subscription',
+            builder: (context, state) =>  SubscriptionPage(),
           ),
         ],
       ),
