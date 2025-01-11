@@ -97,6 +97,7 @@ class SubscriptionPage extends StatelessWidget {
     // Get screen width to determine layout
     final screenWidth = MediaQuery.of(context).size.width;
     final isDesktop = screenWidth > 1024;
+    // ignore: unused_local_variable
     final isTablet = screenWidth > 600 && screenWidth <= 1024;
 
     return SizedBox(
